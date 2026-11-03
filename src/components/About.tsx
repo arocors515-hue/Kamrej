@@ -24,19 +24,23 @@ export const About: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-16">
           {/* Left Column: Authentic Photography with Frame Accent */}
           <div className="lg:col-span-5 relative group">
-            <div className="relative rounded-lg overflow-hidden border border-white/10 shadow-2xl bg-neutral-900 aspect-4/3">
+            <div className="relative rounded-lg overflow-hidden border border-white/10 shadow-2xl bg-black aspect-4/3 flex items-center justify-center">
+              <div
+                className="absolute inset-0 bg-cover bg-center blur-2xl opacity-30 scale-125"
+                style={{ backgroundImage: `url('/assets/aistudio/Screenshot_2024-11-25_080748_1955f82c.png')` }}
+              />
               <img
-                src="/src/assets/images/training_heavy_iron_1793698076108.jpg"
-                alt="Olympic barbell and heavy iron plates at Kamaraj Gym"
-                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
+                src="/assets/aistudio/Screenshot_2024-11-25_080748_1955f82c.png"
+                alt="Kamaraj Gym coach and member"
+                className="relative z-10 w-full h-full object-contain object-center"
                 referrerPolicy="no-referrer"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-              <div className="absolute bottom-4 left-4 right-4 text-xs text-neutral-300">
+              <div className="absolute inset-0 z-20 pointer-events-none bg-gradient-to-t from-black/85 via-transparent to-transparent" />
+              <div className="absolute bottom-4 left-4 right-4 z-30 text-xs text-neutral-300">
                 <span className="font-bold text-white uppercase tracking-wider block font-heading text-sm">
-                  The Old-School Iron Standard
+                  Personal Guidance & Community
                 </span>
-                Heavy knurled barbells, cast iron plates, and zero shortcuts.
+                Friendly trainers, personal mentorship, and true iron discipline.
               </div>
             </div>
           </div>
