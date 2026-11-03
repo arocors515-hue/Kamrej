@@ -1,0 +1,35 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-display: 'Oswald', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: #0a0a0a;
+    color: #f3f4f6;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: 0.02em;
+  }
+}
+
+/* Custom utility for athletic display uppercase headers */
+.font-heading {
+  font-family: 'Oswald', sans-serif;
+  letter-spacing: 0.03em;
+}
+
+/* Subtle iron texture overlay for atmospheric cards */
+.iron-card {
+  background: linear-gradient(180deg, rgba(26, 26, 26, 0.95) 0%, rgba(15, 15, 15, 0.98) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.iron-card:hover {
+  border-color: rgba(220, 38, 38, 0.35);
+}

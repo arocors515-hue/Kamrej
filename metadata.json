@@ -1,0 +1,6 @@
+{
+  "name": "Kamaraj Gym - Old-School Bodybuilding & Fitness in Bengaluru",
+  "description": "Official website of Kamaraj Gym in Halasuru, Bengaluru. Built by discipline, powered by strength. Weight training, bodybuilding, and fitness coaching.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
