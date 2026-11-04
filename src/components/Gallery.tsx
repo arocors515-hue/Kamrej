@@ -52,33 +52,21 @@ export const Gallery: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredItems.map((item, index) => {
             const isMarquee = index === 0;
-            const isPortrait = item.imageUrl.includes('Screenshot_2024-11-25');
             return (
               <div
                 key={item.id}
                 onClick={() => setSelectedPhoto(item)}
-                className={`group relative rounded-lg overflow-hidden border border-white/10 bg-black cursor-pointer shadow-lg hover:border-red-600/50 transition-all ${
+                className={`group relative rounded-lg overflow-hidden border border-white/10 bg-neutral-900 cursor-pointer shadow-lg hover:border-red-600/50 transition-all ${
                   isMarquee ? 'sm:col-span-2 lg:col-span-2 aspect-16/9' : 'aspect-4/3'
                 }`}
               >
-                {/* Ambient blur backdrop for uncropped portrait photos */}
-                {isPortrait && (
-                  <div
-                    className="absolute inset-0 bg-cover bg-center blur-2xl opacity-35 scale-125"
-                    style={{ backgroundImage: `url(${item.imageUrl})` }}
-                  />
-                )}
                 <img
                   src={item.imageUrl}
                   alt={item.title}
-                  className={`relative z-10 w-full h-full ${
-                    isPortrait
-                      ? 'object-contain object-center'
-                      : 'object-cover group-hover:scale-105 transition-transform duration-700 ease-out'
-                  }`}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out"
                   referrerPolicy="no-referrer"
                 />
-                <div className="absolute inset-0 z-20 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-90 group-hover:opacity-95 transition-opacity" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-transparent opacity-90 group-hover:opacity-95 transition-opacity" />
 
                 {/* Overlay Text & Category */}
                 <div className="absolute bottom-0 left-0 right-0 p-5 flex items-end justify-between gap-4">
